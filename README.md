@@ -1,10 +1,12 @@
 # Pong
-###Controls:
+### Controls:
 
--start, pause and resume with SPACE
+-start, pause and resume................................SPACE
 
--left player up = W 
--left player down = S
+-left player up......................................................W
 
--right player up = ARROW UP
--right player down = ARROW DOWN
+-left player down................................................S
+
+-right player up...................................................ARROW UP
+
+-right player down.............................................ARROW DOWN
