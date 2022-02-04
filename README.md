@@ -1,4 +1,4 @@
-# Pong
+## Pong!
 ### Controls:
 
 -start, pause and resume................................SPACE
