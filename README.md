@@ -20,4 +20,4 @@ javac Main.java
 java Main
 ```
 For executable: <br>
-Download and execute the "Snake.exe" file
+Download and execute the "Pong.exe" file
