@@ -15,7 +15,7 @@
 Download and extract the .zip file <br> <br>
 For Windows cmd or Powershell: <br>
 -go to the src folder <br>
--<kbd>SHIFT</kbd> + <kbd>RIGHT MOUSE BUTTON</kbd>
+-<kbd>SHIFT</kbd> + <kbd>RIGHT CLICK</kbd>
 -klick "Open PowerShell here"
 -type
 ```
