@@ -11,10 +11,13 @@
 ## Installation guide
 Download and extract the .zip file <br> <br>
 For Windows cmd or Powershell: <br>
--go to the src folder <br>
--<kbd>SHIFT</kbd> + <kbd>RIGHT CLICK</kbd>
--klick "Open PowerShell here"
--type
+<ul>
+  <li> go to the src folder </li>
+  <li> <kbd>SHIFT</kbd> + <kbd>RIGHT CLICK</kbd> </li>
+  <li> klick "Open PowerShell here" </li>
+  <li> type: </li>
+</ul>
+
 ```
 javac main/java/Main.java
 java main/java/Main
