@@ -1,3 +1,4 @@
+package main.java;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
@@ -10,7 +11,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.io.BufferedInputStream;
 import java.io.File;
+import java.io.InputStream;
 import java.util.Random;
 import java.awt.BasicStroke;
 
@@ -18,8 +21,8 @@ import java.awt.BasicStroke;
 public class MainPanel extends JPanel implements ActionListener, KeyListener{
 	private static final long serialVersionUID = -2324407767446391362L;
 	
-	File paddleSoundFile = new File("resources\\paddle.wav");
-	File scoreSoundFile = new File("resources\\score.wav");
+	InputStream paddleSoundStream = new BufferedInputStream(getClass().getResourceAsStream("/main/resources/paddle.wav"));
+	InputStream scoreSoundStream = new BufferedInputStream(getClass().getResourceAsStream("/main/resources/score.wav"));
 	
 	final int playerWidth = 20;
 	final int playerHeight = 150;
@@ -45,7 +48,7 @@ public class MainPanel extends JPanel implements ActionListener, KeyListener{
 	
 	Clip[] audioClips = new Clip[2];
 	
-	MainPanel(){	
+	MainPanel(){
         audioClips = initSound();
 		this.setBounds(0,0,Frame.frameWidth, Frame.frameHeight);
 		this.setBackground(Color.black);
@@ -63,28 +66,28 @@ public class MainPanel extends JPanel implements ActionListener, KeyListener{
 		timer.start();
         this.addKeyListener(this);
         this.setFocusable(true);
-        this.setFocusTraversalKeysEnabled(false);
-        
+        this.setFocusTraversalKeysEnabled(false);    
         
         resetAfterScore();
 	}
 	
 	private Clip[] initSound() {
 		Clip[] audioClips = new Clip[2];
-		
+
 		try {
-			AudioInputStream paddleAudioStream = AudioSystem.getAudioInputStream(paddleSoundFile);
-			AudioInputStream scoreAudioStream = AudioSystem.getAudioInputStream(scoreSoundFile);
-			
+			AudioInputStream paddleAudioStream = AudioSystem.getAudioInputStream(paddleSoundStream);
+			AudioInputStream scoreAudioStream = AudioSystem.getAudioInputStream(scoreSoundStream);
+
 			Clip paddleSoundClip = AudioSystem.getClip();
 			Clip scoreSoundClip = AudioSystem.getClip();
-			
+
 			paddleSoundClip.open(paddleAudioStream);
 			scoreSoundClip.open(scoreAudioStream);
-			
+
 			audioClips[0] = paddleSoundClip;
 			audioClips[1] = scoreSoundClip;
 		} catch(Exception e) {
+			e.printStackTrace();
 				System.out.println("Something went wrong with the sound!");
 		}
 		
