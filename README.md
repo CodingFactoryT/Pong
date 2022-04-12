@@ -15,7 +15,7 @@ or do
 git clone https://github.com/CodingFactoryT/Pong.git
 ```
 if you have git installed <br> <br>
-For Windows cmd or Powershell: <br>
+For Windows: <br>
 <ul>
   <li> go into the src folder </li>
   <li> <kbd>SHIFT</kbd> + <kbd>RIGHT CLICK</kbd> </li>
