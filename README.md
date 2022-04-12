@@ -17,7 +17,7 @@ git clone https://github.com/CodingFactoryT/Pong.git
 if you have git installed <br> <br>
 For Windows cmd or Powershell: <br>
 <ul>
-  <li> go to the src folder </li>
+  <li> go into the src folder </li>
   <li> <kbd>SHIFT</kbd> + <kbd>RIGHT CLICK</kbd> </li>
   <li> click "Open PowerShell here" </li>
   <li> type: </li>
